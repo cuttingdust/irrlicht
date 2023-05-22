@@ -1,0 +1,417 @@
+﻿  CCgMaterialRenderer.cpp
+  CD3D9CgMaterialRenderer.cpp
+  CDefaultSceneNodeAnimatorFactory.cpp
+  CDefaultSceneNodeFactory.cpp
+  CGeometryCreator.cpp
+  CMeshCache.cpp
+  CMeshManipulator.cpp
+  COpenGLCgMaterialRenderer.cpp
+  CSceneManager.cpp
+  C3DSMeshFileLoader.cpp
+  CSMFMeshFileLoader.cpp
+  CAnimatedMeshHalfLife.cpp
+  CAnimatedMeshMD2.cpp
+  CAnimatedMeshMD3.cpp
+  CB3DMeshFileLoader.cpp
+  CBSPMeshFileLoader.cpp
+  CColladaFileLoader.cpp
+  CCSMLoader.cpp
+  CDMFLoader.cpp
+  CIrrMeshFileLoader.cpp
+  正在生成代码...
+  正在编译...
+  CLMTSMeshFileLoader.cpp
+  CLWOMeshFileLoader.cpp
+  CMD2MeshFileLoader.cpp
+  CMD3MeshFileLoader.cpp
+  CMS3DMeshFileLoader.cpp
+  CMY3DMeshFileLoader.cpp
+  COBJMeshFileLoader.cpp
+  COCTLoader.cpp
+  COgreMeshFileLoader.cpp
+  CPLYMeshFileLoader.cpp
+  CQ3LevelMesh.cpp
+  CSkinnedMesh.cpp
+  CSTLMeshFileLoader.cpp
+  CXMeshFileLoader.cpp
+  CAnimatedMeshSceneNode.cpp
+  CBillboardSceneNode.cpp
+  CBoneSceneNode.cpp
+  CCameraSceneNode.cpp
+  CCubeSceneNode.cpp
+  CDummyTransformationSceneNode.cpp
+  正在生成代码...
+  正在编译...
+  CEmptySceneNode.cpp
+  CLightSceneNode.cpp
+  CMeshSceneNode.cpp
+  COctreeSceneNode.cpp
+  CQuake3ShaderSceneNode.cpp
+  CShadowVolumeSceneNode.cpp
+  CSkyBoxSceneNode.cpp
+  CSkyDomeSceneNode.cpp
+  CSphereSceneNode.cpp
+  CTerrainSceneNode.cpp
+  CTextSceneNode.cpp
+  CVolumeLightSceneNode.cpp
+  CWaterSurfaceSceneNode.cpp
+  CParticleAnimatedMeshSceneNodeEmitter.cpp
+  CParticleAttractionAffector.cpp
+  CParticleBoxEmitter.cpp
+  CParticleCylinderEmitter.cpp
+  CParticleFadeOutAffector.cpp
+  CParticleGravityAffector.cpp
+  CParticleMeshEmitter.cpp
+  正在生成代码...
+  正在编译...
+  CParticlePointEmitter.cpp
+  CParticleRingEmitter.cpp
+  CParticleRotationAffector.cpp
+  CParticleScaleAffector.cpp
+  CParticleSphereEmitter.cpp
+  CParticleSystemSceneNode.cpp
+  CMetaTriangleSelector.cpp
+  COctreeTriangleSelector.cpp
+  CSceneCollisionManager.cpp
+  CTerrainTriangleSelector.cpp
+  CTriangleBBSelector.cpp
+  CTriangleSelector.cpp
+  CSceneLoaderIrr.cpp
+  CSceneNodeAnimatorCameraFPS.cpp
+  CSceneNodeAnimatorCameraMaya.cpp
+  CSceneNodeAnimatorCollisionResponse.cpp
+  CSceneNodeAnimatorDelete.cpp
+  CSceneNodeAnimatorFlyCircle.cpp
+  CSceneNodeAnimatorFlyStraight.cpp
+  CSceneNodeAnimatorFollowSpline.cpp
+  正在生成代码...
+  正在编译...
+  CSceneNodeAnimatorRotation.cpp
+  CSceneNodeAnimatorTexture.cpp
+  CColladaMeshWriter.cpp
+  CIrrMeshWriter.cpp
+  COBJMeshWriter.cpp
+  CPLYMeshWriter.cpp
+  CSTLMeshWriter.cpp
+  CVideoModeList.cpp
+  CSoftwareDriver.cpp
+  CSoftwareTexture.cpp
+  CTRFlat.cpp
+  CTRFlatWire.cpp
+  CTRGouraud.cpp
+  CTRGouraudWire.cpp
+  CTRTextureFlat.cpp
+  CTRTextureFlatWire.cpp
+  CTRTextureGouraud.cpp
+  CTRTextureGouraudAdd.cpp
+  CTRTextureGouraudNoZ.cpp
+  CTRTextureGouraudWire.cpp
+  正在生成代码...
+  正在编译...
+  CZBuffer.cpp
+  COpenGLDriver.cpp
+D:\MyFile\irrlicht\source\Irrlicht\COpenGLDriver.cpp(148,44): warning C4838: 从“int”转换到“DWORD”需要收缩转换
+  COpenGLExtensionHandler.cpp
+  COpenGLNormalMapRenderer.cpp
+  COpenGLParallaxMapRenderer.cpp
+  COpenGLShaderMaterialRenderer.cpp
+  COpenGLSLMaterialRenderer.cpp
+  COpenGLTexture.cpp
+  CD3D8Driver.cpp
+  CD3D8NormalMapRenderer.cpp
+  CD3D8ParallaxMapRenderer.cpp
+  CD3D8ShaderMaterialRenderer.cpp
+  CD3D8Texture.cpp
+  CColorConverter.cpp
+  CFPSCounter.cpp
+  CImage.cpp
+  CNullDriver.cpp
+  CImageWriterBMP.cpp
+  CImageWriterJPG.cpp
+  CImageWriterPCX.cpp
+  正在生成代码...
+  正在编译...
+  CImageWriterPNG.cpp
+  CImageWriterPPM.cpp
+  CImageWriterPSD.cpp
+  CImageWriterTGA.cpp
+  CImageLoaderBMP.cpp
+  CImageLoaderDDS.cpp
+  CImageLoaderJPG.cpp
+  CImageLoaderPCX.cpp
+  CImageLoaderPNG.cpp
+  CImageLoaderPPM.cpp
+  CImageLoaderPSD.cpp
+  CImageLoaderRGB.cpp
+  CImageLoaderTGA.cpp
+  CImageLoaderWAL.cpp
+  CD3D9Driver.cpp
+  CD3D9HLSLMaterialRenderer.cpp
+  CD3D9NormalMapRenderer.cpp
+  CD3D9ParallaxMapRenderer.cpp
+  CD3D9ShaderMaterialRenderer.cpp
+  CD3D9Texture.cpp
+  正在生成代码...
+  正在编译...
+  CBurningShader_Raster_Reference.cpp
+  CDepthBuffer.cpp
+  CSoftwareDriver2.cpp
+  CSoftwareTexture2.cpp
+  CTRGouraud2.cpp
+  CTRGouraudAlpha2.cpp
+  CTRGouraudAlphaNoZ2.cpp
+  CTRNormalMap.cpp
+  CTRStencilShadow.cpp
+  CTRTextureBlend.cpp
+  CTRTextureDetailMap2.cpp
+  CTRTextureGouraud2.cpp
+  CTRTextureGouraudAdd2.cpp
+  CTRTextureGouraudAddNoZ2.cpp
+  CTRTextureGouraudAlpha.cpp
+  CTRTextureGouraudAlphaNoZ.cpp
+  CTRTextureGouraudNoZ2.cpp
+  CTRTextureGouraudVertexAlpha2.cpp
+  CTRTextureLightMap2_Add.cpp
+  CTRTextureLightMap2_M1.cpp
+  正在生成代码...
+  正在编译...
+  CTRTextureLightMap2_M2.cpp
+  CTRTextureLightMap2_M4.cpp
+  CTRTextureLightMapGouraud2_M4.cpp
+  CTRTextureWire2.cpp
+  IBurningShader.cpp
+  CLogger.cpp
+  COSOperator.cpp
+  Irrlicht.cpp
+  os.cpp
+  aescrypt.cpp
+  aeskey.cpp
+  aestab.cpp
+  fileenc.cpp
+  hmac.cpp
+  prng.cpp
+  pwd2key.cpp
+  sha1.cpp
+  sha2.cpp
+  CIrrDeviceConsole.cpp
+  CIrrDeviceFB.cpp
+  正在生成代码...
+  正在编译...
+  CIrrDeviceLinux.cpp
+  CIrrDeviceSDL.cpp
+  CIrrDeviceStub.cpp
+  CIrrDeviceWin32.cpp
+D:\MyFile\irrlicht\source\Irrlicht\CIrrDeviceWin32.cpp(1492,21): warning C4996: 'GetVersionExA': 被声明为已否决
+D:\MyFile\irrlicht\source\Irrlicht\CIrrDeviceWin32.cpp(1496,9): warning C4996: 'GetVersionExA': 被声明为已否决
+D:\MyFile\irrlicht\source\Irrlicht\CIrrDeviceWin32.cpp(1870,8): warning C4996: 'GetVersionExA': 被声明为已否决
+  CIrrDeviceWinCE.cpp
+  CAttributes.cpp
+D:\MyFile\irrlicht\source\Irrlicht\CAttributeImpl.h(2039,1): warning C4312: “类型强制转换”: 从“irr::u32”转换到更大的“void *”
+  CFileList.cpp
+  CFileSystem.cpp
+  CLimitReadFile.cpp
+  CMemoryFile.cpp
+  CMountPointReader.cpp
+  CNPKReader.cpp
+  CPakReader.cpp
+  CReadFile.cpp
+  CTarReader.cpp
+  CWADReader.cpp
+  CWriteFile.cpp
+  CXMLReader.cpp
+  CXMLWriter.cpp
+  CZipReader.cpp
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(623,25): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(623,25): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(623,25): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(623,25): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(636,26): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(636,26): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(636,26): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(636,26): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(677,25): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(677,25): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(677,25): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(677,25): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(697,25): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(697,25): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(697,25): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(697,25): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(710,26): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(710,26): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(710,26): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(710,26): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(748,25): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(748,25): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(748,25): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(748,25): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(769,25): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(769,25): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(769,25): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(769,25): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(782,26): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(782,26): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(782,26): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(782,26): message : Visual C++ 使用非标准语义时会出现此警告
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(829,23): warning C4477: “swprintf_s”: 格式字符串“%s”需要类型“wchar_t *”的参数，但可变参数 1 拥有了类型“const T *”
+          with
+          [
+              T=irr::c8
+          ]
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(829,23): message : 请考虑在格式字符串中使用“%hs”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(829,23): message : 请考虑在格式字符串中使用“%Ts”
+D:\MyFile\irrlicht\source\Irrlicht\CZipReader.cpp(829,23): message : Visual C++ 使用非标准语义时会出现此警告
+  正在生成代码...
+  正在编译...
+  irrXML.cpp
+  CDefaultGUIElementFactory.cpp
+  CGUIButton.cpp
+  CGUICheckbox.cpp
+  CGUIColorSelectDialog.cpp
+  CGUIComboBox.cpp
+  CGUIContextMenu.cpp
+  CGUIEditBox.cpp
+  CGUIEnvironment.cpp
+  CGUIFileOpenDialog.cpp
+  CGUIFont.cpp
+  CGUIImage.cpp
+  CGUIImageList.cpp
+  CGUIInOutFader.cpp
+  CGUIListBox.cpp
+  CGUIMenu.cpp
+  CGUIMeshViewer.cpp
+  CGUIMessageBox.cpp
+  CGUIModalScreen.cpp
+  CGUIScrollBar.cpp
+  正在生成代码...
+  正在编译...
+  CGUISkin.cpp
+  CGUISpinBox.cpp
+  CGUISpriteBank.cpp
+  CGUIStaticText.cpp
+  CGUITabControl.cpp
+  CGUITable.cpp
+  CGUIToolBar.cpp
+  CGUITreeView.cpp
+  CGUIWindow.cpp
+  正在生成代码...
+  LzmaDec.c
+  adler32.c
+  compress.c
+  crc32.c
+  deflate.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  trees.c
+  uncompr.c
+  zutil.c
+  jaricom.c
+  jcapimin.c
+  jcapistd.c
+  jcarith.c
+  jccoefct.c
+  jccolor.c
+  jcdctmgr.c
+  jchuff.c
+  jcinit.c
+  正在生成代码...
+  正在编译...
+  jcmainct.c
+  jcmarker.c
+  jcmaster.c
+  jcomapi.c
+  jcparam.c
+  jcprepct.c
+  jcsample.c
+  jctrans.c
+  jdapimin.c
+  jdapistd.c
+  jdarith.c
+  jdatadst.c
+  jdatasrc.c
+  jdcoefct.c
+  jdcolor.c
+  jddctmgr.c
+  jdhuff.c
+  jdinput.c
+  jdmainct.c
+  jdmarker.c
+  正在生成代码...
+  正在编译...
+  jdmaster.c
+  jdmerge.c
+  jdpostct.c
+  jdsample.c
+  jdtrans.c
+  jerror.c
+  jfdctflt.c
+  jfdctfst.c
+  jfdctint.c
+  jidctflt.c
+  jidctfst.c
+  jidctint.c
+  jmemmgr.c
+  jmemnobs.c
+  jquant1.c
+  jquant2.c
+  jutils.c
+  png.c
+  pngerror.c
+  pngget.c
+  正在生成代码...
+  正在编译...
+  pngmem.c
+  pngpread.c
+  pngread.c
+  pngrio.c
+  pngrtran.c
+  pngrutil.c
+  pngset.c
+  pngtrans.c
+  pngwio.c
+  pngwrite.c
+  pngwtran.c
+  pngwutil.c
+  blocksort.c
+  bzcompress.c
+  bzlib.c
+  crctable.c
+  decompress.c
+  huffman.c
+  randtable.c
+  正在生成代码...
+    正在创建库 ..\..\lib\Win64-visualstudio\Irrlicht.lib 和对象 ..\..\lib\Win64-visualstudio\Irrlicht.exp
+  Irrlicht12.0.vcxproj -> D:\MyFile\irrlicht\bin\Win64-VisualStudio\Irrlicht.dll

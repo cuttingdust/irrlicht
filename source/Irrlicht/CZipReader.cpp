@@ -1,4 +1,4 @@
-// Copyright (C) 2002-2012 Nikolaus Gebhardt
+﻿// Copyright (C) 2002-2012 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
@@ -689,11 +689,11 @@ IReadFile* CZipReader::createAndOpenFile(u32 index)
 	case 12:
 		{
   			#ifdef _IRR_COMPILE_WITH_BZIP2_
-
+		  
 			const u32 uncompressedSize = e.header.DataDescriptor.UncompressedSize;
 			c8* pBuf = new c8[ uncompressedSize ];
 			if (!pBuf)
-			{
+			       
 				swprintf ( buf, 64, L"Not enough memory for decompressing %s", Files[index].FullName.c_str() );
 				os::Printer::log( buf, ELL_ERROR);
 				if (decrypted)
