@@ -1,4 +1,4 @@
-// Copyright (C) 2002-2012 Nikolaus Gebhardt
+﻿// Copyright (C) 2002-2012 Nikolaus Gebhardt
 // This file is part of the "Irrlicht Engine".
 // For conditions of distribution and use, see copyright notice in irrlicht.h
 
@@ -1449,6 +1449,8 @@ typedef BOOL (WINAPI *PGPI)(DWORD, DWORD, DWORD, DWORD, PDWORD);
 // Needed for old windows apis
 // depending on the SDK version and compilers some defines might be available
 // or not
+
+typedef LONG(NTAPI* pfnRtlGetVersion)(RTL_OSVERSIONINFOEXW*);
 #ifndef PRODUCT_ULTIMATE
 #define PRODUCT_ULTIMATE	0x00000001
 #define PRODUCT_HOME_BASIC	0x00000002
@@ -1482,186 +1484,71 @@ typedef BOOL (WINAPI *PGPI)(DWORD, DWORD, DWORD, DWORD, PDWORD);
 
 void CIrrDeviceWin32::getWindowsVersion(core::stringc& out)
 {
-	OSVERSIONINFOEX osvi;
-	PGPI pGPI;
-	BOOL bOsVersionInfoEx;
+	RTL_OSVERSIONINFOEXW rovi = { 0 };
+	rovi.dwOSVersionInfoSize = sizeof(rovi);
 
-	ZeroMemory(&osvi, sizeof(OSVERSIONINFOEX));
-	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
-
-	bOsVersionInfoEx = GetVersionEx((OSVERSIONINFO*) &osvi);
-	if (!bOsVersionInfoEx)
+	HMODULE hmod = GetModuleHandleW(L"ntdll.dll");
+	if (hmod)
 	{
-		osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-		if (! GetVersionEx((OSVERSIONINFO *) &osvi))
-			return;
+		pfnRtlGetVersion f = (pfnRtlGetVersion)GetProcAddress(hmod, "RtlGetVersion");
+		if (f)
+			f(&rovi);
 	}
 
-	switch (osvi.dwPlatformId)
+	if (VER_PLATFORM_WIN32_NT == rovi.dwPlatformId)
 	{
-	case VER_PLATFORM_WIN32_NT:
-		if (osvi.dwMajorVersion <= 4)
+		if (rovi.dwMajorVersion <= 4)
 			out.append("Microsoft Windows NT ");
-		else
-		if (osvi.dwMajorVersion == 5 && osvi.dwMinorVersion == 0)
-			out.append("Microsoft Windows 2000 ");
-		else
-		if (osvi.dwMajorVersion == 5 && osvi.dwMinorVersion == 1)
-			out.append("Microsoft Windows XP ");
-		else
-		if (osvi.dwMajorVersion == 6 )
+		else if (5 == rovi.dwMajorVersion)
 		{
-			if (osvi.dwMinorVersion == 0)
+			switch (rovi.dwMinorVersion)
 			{
-				if (osvi.wProductType == VER_NT_WORKSTATION)
-					out.append("Microsoft Windows Vista ");
-				else
-					out.append("Microsoft Windows Server 2008 ");
-			}
-			else if (osvi.dwMinorVersion == 1)
-			{
-				if (osvi.wProductType == VER_NT_WORKSTATION)
-					out.append("Microsoft Windows 7 ");
-				else
-					out.append("Microsoft Windows Server 2008 R2 ");
+			case 0:
+				out.append("Microsoft Windows 2000 ");
+				break;
+			case 1:
+				out.append("Microsoft Windows XP ");
+				break;
+			case 2:
+				out.append("Microsoft Windows Server 2003 ");
+				break;
 			}
 		}
-
-		if (bOsVersionInfoEx)
+		else if (6 == rovi.dwMajorVersion)
 		{
-			if (osvi.dwMajorVersion == 6)
+			switch (rovi.dwMinorVersion)
 			{
-				DWORD dwType;
-				pGPI = (PGPI)GetProcAddress(GetModuleHandle(TEXT("kernel32.dll")), "GetProductInfo");
-				pGPI(osvi.dwMajorVersion, osvi.dwMinorVersion, 0, 0, &dwType);
-
-				switch (dwType)
-				{
-				case PRODUCT_ULTIMATE:
-				case PRODUCT_ULTIMATE_E:
-				case PRODUCT_ULTIMATE_N:
-					out.append("Ultimate Edition ");
-					break;
-				case PRODUCT_PROFESSIONAL:
-				case PRODUCT_PROFESSIONAL_E:
-				case PRODUCT_PROFESSIONAL_N:
-					out.append("Professional Edition ");
-					break;
-				case PRODUCT_HOME_BASIC:
-				case PRODUCT_HOME_BASIC_E:
-				case PRODUCT_HOME_BASIC_N:
-					out.append("Home Basic Edition ");
-					break;
-				case PRODUCT_HOME_PREMIUM:
-				case PRODUCT_HOME_PREMIUM_E:
-				case PRODUCT_HOME_PREMIUM_N:
-					out.append("Home Premium Edition ");
-					break;
-				case PRODUCT_ENTERPRISE:
-				case PRODUCT_ENTERPRISE_E:
-				case PRODUCT_ENTERPRISE_N:
-					out.append("Enterprise Edition ");
-					break;
-				case PRODUCT_BUSINESS:
-				case PRODUCT_BUSINESS_N:
-					out.append("Business Edition ");
-					break;
-				case PRODUCT_STARTER:
-				case PRODUCT_STARTER_E:
-				case PRODUCT_STARTER_N:
-					out.append("Starter Edition ");
-					break;
-				}
+			case 0:
+				out.append((VER_NT_WORKSTATION == rovi.wProductType) ? "Microsoft Windows Vista " : "Microsoft Windows Server 2008 ");
+				break;
+			case 1:
+				out.append((VER_NT_WORKSTATION == rovi.wProductType) ? "Microsoft Windows 7 " : "Microsoft Windows Server 2008 R2 ");
+				break;
+			case 2:
+				out.append((VER_NT_WORKSTATION == rovi.wProductType) ? "Microsoft Windows 8 " : "Microsoft Windows Server 2012 ");
+				break;
+			case 3:
+				out.append((VER_NT_WORKSTATION == rovi.wProductType) ? "Microsoft Windows 8.1 " : "Microsoft Windows Server 2012 R2 ");
+				break;
 			}
-#ifdef VER_SUITE_ENTERPRISE
-			else
-			if (osvi.wProductType == VER_NT_WORKSTATION)
+		}
+		else if (rovi.dwMajorVersion >= 10)
+		{
+			switch (rovi.dwMinorVersion)
 			{
-#ifndef __BORLANDC__
-				if( osvi.wSuiteMask & VER_SUITE_PERSONAL )
-					out.append("Personal ");
-				else
-					out.append("Professional ");
-#endif
+			case 0:
+				out.append((VER_NT_WORKSTATION == rovi.wProductType) ? "Microsoft Windows 10 " : "Microsoft Windows Server 2016 ");
+				break;
 			}
-			else if (osvi.wProductType == VER_NT_SERVER)
-			{
-				if( osvi.wSuiteMask & VER_SUITE_DATACENTER )
-					out.append("DataCenter Server ");
-				else if( osvi.wSuiteMask & VER_SUITE_ENTERPRISE )
-					out.append("Advanced Server ");
-				else
-					out.append("Server ");
-			}
-#endif
 		}
-		else
-		{
-			HKEY hKey;
-			char szProductType[80];
-			DWORD dwBufLen;
-
-			RegOpenKeyEx( HKEY_LOCAL_MACHINE,
-					__TEXT("SYSTEM\\CurrentControlSet\\Control\\ProductOptions"),
-					0, KEY_QUERY_VALUE, &hKey );
-			RegQueryValueEx( hKey, __TEXT("ProductType"), NULL, NULL,
-					(LPBYTE) szProductType, &dwBufLen);
-			RegCloseKey( hKey );
-
-			if (_strcmpi( "WINNT", szProductType) == 0 )
-				out.append("Professional ");
-			if (_strcmpi( "LANMANNT", szProductType) == 0)
-				out.append("Server ");
-			if (_strcmpi( "SERVERNT", szProductType) == 0)
-				out.append("Advanced Server ");
-		}
-
-		// Display version, service pack (if any), and build number.
-
-		char tmp[255];
-
-		if (osvi.dwMajorVersion <= 4 )
-		{
-			sprintf(tmp, "version %ld.%ld %s (Build %ld)",
-					osvi.dwMajorVersion,
-					osvi.dwMinorVersion,
-					irr::core::stringc(osvi.szCSDVersion).c_str(),
-					osvi.dwBuildNumber & 0xFFFF);
-		}
-		else
-		{
-			sprintf(tmp, "%s (Build %ld)", irr::core::stringc(osvi.szCSDVersion).c_str(),
-			osvi.dwBuildNumber & 0xFFFF);
-		}
-
-		out.append(tmp);
-		break;
-
-	case VER_PLATFORM_WIN32_WINDOWS:
-
-		if (osvi.dwMajorVersion == 4 && osvi.dwMinorVersion == 0)
-		{
-			out.append("Microsoft Windows 95 ");
-			if ( osvi.szCSDVersion[1] == 'C' || osvi.szCSDVersion[1] == 'B' )
-				out.append("OSR2 " );
-		}
-
-		if (osvi.dwMajorVersion == 4 && osvi.dwMinorVersion == 10)
-		{
-			out.append("Microsoft Windows 98 ");
-			if ( osvi.szCSDVersion[1] == 'A' )
-				out.append( "SE " );
-		}
-
-		if (osvi.dwMajorVersion == 4 && osvi.dwMinorVersion == 90)
-			out.append("Microsoft Windows Me ");
-
-		break;
-
-	case VER_PLATFORM_WIN32s:
-		out.append("Microsoft Win32s ");
-		break;
 	}
+
+	// Display service pack (if any), and build number.
+	char tmp[255];
+	sprintf(tmp, "%s (Build %ld)",
+		rovi.szCSDVersion,
+		rovi.dwBuildNumber);
+	out.append(tmp);
 }
 
 //! Notifies the device, that it has been resized

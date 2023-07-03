@@ -1,4 +1,4 @@
-/** Example 001 HelloWorld
+﻿/** Example 001 HelloWorld
 
 This Tutorial shows how to set up the IDE for using the Irrlicht Engine and how
 to write a simple HelloWorld program with it. The program will show how to use
@@ -122,7 +122,7 @@ int main()
 	dimensions, etc.
 	*/
 	IrrlichtDevice *device =
-		createDevice( video::EDT_SOFTWARE, dimension2d<u32>(640, 480), 16,
+		createDevice( video::EDT_OPENGL, dimension2d<u32>(640, 480), 16,
 			false, false, false, 0);
 
 	if (!device)
